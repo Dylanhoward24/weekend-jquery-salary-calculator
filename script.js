@@ -9,12 +9,23 @@ function onReady() {
     
     $('#submitButton').on('click', addToList);
 
-    $('#totalMonthly').append('323235235235');
+    // declaration of monthly and annual variables
+    // and division function after addToList code
+    $('#totalMonthly').append(`${totalMonthlyCosts.toFixed(2)}`);
+
 }
 
+    // make sure the math works (it does)
+    // let totalAnnualCosts = 144;
+    // let totalMonthlyCosts = `${totalAnnualCosts}`/12;
+    let totalAnnualCosts = 0;
+    let totalMonthlyCosts = `${totalAnnualCosts}`/12;
+    
+// addToList function (this is what happens
+// whenever the submit button is clicked)
 function addToList() {
     console.log('added items to list');
-    
+
     // assign the first name value to a variable
     let firstNameValue = $('#firstNameInputText').val();
     console.log('firstNameValue', firstNameValue);
@@ -43,6 +54,8 @@ function addToList() {
                 </th>
         </tr>
     `)
+
+    totalAnnualCosts+=annualSalaryValue;
 
     // empty the input fields
     $('#firstNameInputText').val('');
