@@ -8,6 +8,8 @@ function onReady() {
     console.log('so ready');
     
     $('#submitButton').on('click', addToList);
+
+    $('#totalMonthly').append('323235235235');
 }
 
 function addToList() {

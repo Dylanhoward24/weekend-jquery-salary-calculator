@@ -64,11 +64,8 @@ th, td {
 }
 
 /* style the total monthly text */
-p {text-align: right;}
-
-/* style the delete buttons */
-#deleteBtn {
-    width: 75px;
-    height: 20px;
-    align-content: center;
+p {
+    text-align: right;
+    font-size: 24px;
+    font-style: bold;
 }
