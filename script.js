@@ -28,4 +28,22 @@ function addToList() {
     // assign the annual salary value to a variable
     let annualSalaryValue = $('#annualSalaryInputText').val();
     console.log('annualSalaryValue', annualSalaryValue);
+
+    $('#tableOfEmployees').append(`
+        <tr>
+            <th>${firstNameValue}</th>
+            <th>${lastNameValue}</th>
+            <th>${idValue}</th>
+            <th>${titleValue}</th>
+            <th>${annualSalaryValue}</th>
+                <th>
+                    <button class="deleteBtn">Delete</button>
+                </th>
+        </tr>
+    
+    
+    
+    
+    `)
 }
+
