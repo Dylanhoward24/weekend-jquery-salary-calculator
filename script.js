@@ -35,15 +35,17 @@ function addToList() {
             <th>${lastNameValue}</th>
             <th>${idValue}</th>
             <th>${titleValue}</th>
-            <th>${annualSalaryValue}</th>
+            <th>$${annualSalaryValue}</th>
                 <th>
                     <button class="deleteBtn">Delete</button>
                 </th>
         </tr>
-    
-    
-    
-    
     `)
-}
 
+    // empty the input fields
+    $('#firstNameInputText').val('');
+    $('#lastNameInputText').val('');
+    $('#idInputText').val('');
+    $('#titleInputText').val('');
+    $('#annualSalaryInputText').val('');
+}

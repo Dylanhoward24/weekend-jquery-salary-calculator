@@ -14,11 +14,11 @@
     [X] " " job title
     [X] " " annual salary
 
-[ ] Submit Button
-    [ ] collect information
-    [ ] store information to calculate monthly costs
-    [ ] append information to DOM
-    [ ] clear the input fields
+[X] Submit Button
+    [X] collect information
+    [X] store information to calculate monthly costs
+    [X] append information to DOM
+    [X] clear the input fields
 
 [ ] Stored Information
     [ ] calculate monthly costs
