@@ -7,12 +7,12 @@
     [X] create styling document style.css
     [X] link/source all new documents into index.html
 
-[ ] Input
-    [ ] employee first name
-    [ ] " " last name
-    [ ] " " ID number
-    [ ] " " job title
-    [ ] " " annual salary
+[X] Input
+    [X] employee first name
+    [X] " " last name
+    [X] " " ID number
+    [X] " " job title
+    [X] " " annual salary
 
 [ ] Submit Button
     [ ] collect information

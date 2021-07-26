@@ -1,7 +1,67 @@
-
-
-#submitButton {
-    display: block;
-    margin-top: 10px;
-    margin-left: 700px;
+/* format the body */
+body {
+    width: 900px;
 }
+
+/* style the header */
+h1 {
+    padding: 30px;
+    text-align: center;
+    font-size: 32px;
+    color: azure;
+    background-color: rgb(109, 105, 105);
+}
+
+/* style the inputs */
+#firstNameInputText {
+    width: 150px;
+    height: 25px;
+    border: 2px solid black;
+}
+#lastNameInputText {
+    margin-left: 10px;
+    width: 150px;
+    height: 25px;
+    border: 2px solid black;
+}
+#idInputText {
+    margin-left: 10px;
+    width: 150px;
+    height: 25px;
+    border: 2px solid black;
+}
+#titleInputText {
+    margin-left: 10px;
+    width: 150px;
+    height: 25px;
+    border: 2px solid black;
+}
+#annualSalaryInputText {
+    margin-left: 10px;
+    width: 150px;
+    height: 25px;
+    border: 2px solid black;
+}
+
+/* style the submit button */
+#submitButton {
+    width: 75px;
+    height: 25px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 770px;
+}
+
+/* style the table */
+table {
+    border-collapse: collapse;
+}
+th, td {
+    width: 140px;
+    height: 25px;
+    border: 2px solid black;
+    text-align: left;
+}
+
+/* style the total monthly text */
+p {text-align: end;}
