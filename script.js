@@ -78,8 +78,15 @@ function addToList() {
         console.log('salary sum', salarySum);
     } // end for loop
 
+    let monthlySalary = `${(salarySum/12).toFixed(2)}`;
     // append the monthly onto the DOM
-    $('#totalMonthly').append(`Total Monthly: $${(salarySum/12).toFixed(2)}`);
+    $('#totalMonthly').append(`Total Monthly: $${monthlySalary}`);
+
+    // style the red background-color if > $20,000
+    if (monthlySalary > 20000) {
+        let backgroundColor = $('#totalMonthly');
+        backgroundColor.css('background-color', 'red');
+    }
 
 } // end addToList
 
