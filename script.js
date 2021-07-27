@@ -38,12 +38,25 @@ function addToList() {
     $('#titleInputText').val('');
     $('#annualSalaryInputText').val('');
 
-    let el = $('#employeeInfo');
+    // empty out the table
+    let el = $('#tableOfEmployees');
     el.empty();
 
-    // append to DOM (loop through employees array each time button is clicked
+    // append the outline of the table's contents
+    $('#tableOfEmployees').append(`
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+            <th></th>
+        </tr>
+    `)
+
+    // append to DOM (loop through employees array each time button is clicked)
     for (let employee of employees) {
-        $('#employeeInfo').append(`
+        $('#tableOfEmployees').append(`
             <tr>
                 <th>${employee.firstName}</th>
                 <th>${employee.lastName}</th>
