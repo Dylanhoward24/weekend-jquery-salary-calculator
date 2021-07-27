@@ -26,10 +26,10 @@ function addToList() {
         annualSalary: $('#annualSalaryInputText').val()
     };
     
-    console.log(employee);
-    
     // push new object to employees array
     employees.push(employee);
+    // log array employees to make sure everything worked
+    console.log(employees);
 
     // empty the input fields
     $('#firstNameInputText').val('');
@@ -37,4 +37,18 @@ function addToList() {
     $('#idInputText').val('');
     $('#titleInputText').val('');
     $('#annualSalaryInputText').val('');
+
+    // append to DOM (loop through employees array each time button is clicked
+    for (let employee of employees) {
+        $('#tableOfEmployees').append(`
+            <tr>
+                <th>${employee.firstName}</th>
+                <th>${employee.lastName}</th>
+                <th>${employee.id}</th>
+                <th>${employee.title}</th>
+                <th>${employee.annualSalary}</th>
+                <th><button>Delete</button></th>
+            </tr>
+        `);
+    }
 }
