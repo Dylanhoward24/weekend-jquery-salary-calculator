@@ -3,15 +3,20 @@ console.log('in script.js');
 // THE INCANTATION
 $(document).ready(onReady);
 
+// global variables
+let employees = [];
+let salarySum = 0;
+
 // event handlers need to be in onReady
 function onReady() {
     console.log('so ready');
     
     $('#submitButton').on('click', addToList);
 
-}
+    // delegation
+    $(document).on('click', '#deleteBtn', removeFromList);
 
-let employees = [];
+}
 
 // addToList function (this is what happens
 // whenever the submit button is clicked)
@@ -42,6 +47,9 @@ function addToList() {
     let el = $('#tableOfEmployees');
     el.empty();
 
+    // empty the total monthly
+    $('#totalMonthly').empty();
+
     // append the outline of the table's contents
     $('#tableOfEmployees').append(`
         <tr>
@@ -62,9 +70,24 @@ function addToList() {
                 <th>${employee.lastName}</th>
                 <th>${employee.id}</th>
                 <th>${employee.title}</th>
-                <th>${employee.annualSalary}</th>
-                <th><button>Delete</button></th>
+                <th>$${employee.annualSalary}</th>
+                <th><button id="deleteBtn">Delete</button></th>
             </tr>
         `);
-    }
-}
+        salarySum += Number(employee.annualSalary);
+        console.log('salary sum', salarySum);
+    } // end for loop
+
+    // append the monthly onto the DOM
+    $('#totalMonthly').append(`Total Monthly: $${(salarySum/12).toFixed(2)}`);
+
+} // end addToList
+
+function removeFromList() {
+    console.log('in removeFromList');
+    
+    let el = $(this).parent();
+    el.parent().remove();
+
+    employees.splice(el, 1);
+} // end removeFromList
