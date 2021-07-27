@@ -5,7 +5,6 @@ $(document).ready(onReady);
 
 // global variables
 let employees = [];
-let salarySum = 0;
 
 // event handlers need to be in onReady
 function onReady() {
@@ -61,6 +60,10 @@ function addToList() {
             <th></th>
         </tr>
     `)
+
+    // set salarySum to 0 each time button is clicked since the
+    // information gets looped through and reappended each time
+    let salarySum = 0;
 
     // append to DOM (loop through employees array each time button is clicked)
     for (let employee of employees) {
